@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "asr-fun-nano"
+name = "asr-fun-nano-cpu"
 version = "1.0.0"
 description = "CPU speech recognition with character-level timestamps & voiceprint. Fun-ASR-Nano packaged for easy pip install and API integration."
 readme = "README.md"
