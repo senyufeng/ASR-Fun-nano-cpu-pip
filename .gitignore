@@ -1,0 +1,46 @@
+.idea
+**/__pycache__/
+**/.DS_Store
+init_model/
+*.tar.gz
+test_local/
+RapidASR
+export/*
+*.pyc
+.eggs
+MaaS-lib
+.egg*
+dist
+build
+funasr.egg-info
+docs/_build
+modelscope
+samples
+.ipynb_checkpoints
+outputs*
+emotion2vec*
+GPT-SoVITS*
+modelscope_models
+examples/aishell/llm_asr_nar/*
+*egg-info
+env/
+
+# === ASR-Fun-nano additions ===
+# Models (large, downloaded separately)
+models/
+*.pt
+*.gguf
+*.bin
+*.pth
+# Voiceprint DB (local)
+voiceprint_db/
+# Temp/test scripts
+test_quick.py
+test_vp_debug.py
+fix_imports.py
+tmp_*
+# Keep integration tests
+!tests/
+# Python artifacts
+*.whl
+*.py[cod]

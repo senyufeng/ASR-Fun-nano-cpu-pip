@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "asr-fun-nano"
+version = "1.0.0"
+description = "CPU speech recognition with character-level timestamps & voiceprint. Fun-ASR-Nano packaged for easy pip install and API integration."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "ASR-Fun-Nano Team"}]
+keywords = ["speech-recognition", "asr", "voiceprint", "cpu", "funasr", "timestamps"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "torchaudio",
+    "funasr>=1.3.14",
+    "modelscope",
+    "huggingface_hub",
+    "numpy",
+    "scipy>=1.4.1",
+    "librosa",
+    "soundfile>=0.12.1",
+    "PyYAML>=5.1.2",
+    "omegaconf>=2.0",
+    "transformers",
+    "tiktoken",
+    "sentencepiece",
+    "kaldiio>=2.17.0",
+    "jieba",
+    "jamo",
+    "jaconv",
+    "umap_learn",
+    "editdistance>=0.5.2",
+    "tqdm",
+    "requests",
+    "tensorboardX",
+    "torch_complex",
+    "oss2",
+]
+
+[project.urls]
+Homepage = "https://github.com/modelscope/FunASR"
+Source = "https://github.com/modelscope/FunASR"
+
+[project.scripts]
+asr-nano = "asr_nano.engine:main"
+asr-nano-server = "asr_nano.server:main"
+
+[tool.setuptools.packages.find]
+include = ["asr_nano*"]
